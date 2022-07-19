@@ -27,14 +27,14 @@ export default function SignUp() {
             .max(30, "Must be 30 characters or less")
             .email("Invalid email address")
             .required("Please enter your email"),
-          name: Yup.string().required("Please enter your name"),
+            fullName: Yup.string().required("Please enter your name"),
           password: Yup.string().required("Please enter your password"),
         })}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
           setLoading(true);
           const payload = {
             email: values.email,
-            name: values.name,
+            fullName: values.fullName,
             password: values.password,
           };
 
@@ -101,11 +101,11 @@ export default function SignUp() {
                     fluid
                     icon="user"
                     iconPosition="left"
-                    placeholder="Name"
-                    name="name"
+                    placeholder="Full Name"
+                    name="fullName"
                     onChange={handleChange}
                     error={
-                      errors.name && touched.name
+                      errors.fullName && touched.fullName
                         ? {
                             content: "Please enter a valid name",
                             pointing: "below",

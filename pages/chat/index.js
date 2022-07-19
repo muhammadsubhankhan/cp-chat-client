@@ -129,7 +129,7 @@ export default function Home({ user, conversations }) {
         return Object.assign(
           {},
           {
-            title: user.name,
+            title: user.fullName,
             id: user._id,
           }
         );

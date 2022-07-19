@@ -1,5 +1,5 @@
 {
-  "name": "chat-app-client",
+  "name": "cp-chat-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
